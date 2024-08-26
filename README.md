@@ -25,9 +25,13 @@ PWA Text Editor is a single-page application that runs in the browser. It was bu
 
 [Deployed application link]()
 
-The image shows the apperance of the single-page application
+The image below shows the apperance of the single-page application
 
-![alt text]()
+![alt text](/assets/app-page.png)
+
+The image below shows the apperance of the application logo when installed
+
+![alt text](/assets/app-logo.png)
 
 ## Badges
 
