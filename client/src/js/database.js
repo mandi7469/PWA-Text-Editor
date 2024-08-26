@@ -17,7 +17,7 @@ const initdb = async () =>
 //exports a function to POST to the database
 export const putDb = async (content) => {
   console.log("PUT to the database");
-  //creates a connection to the database database and version 
+  //creates a connection to the database database and version
   const textDB = await openDB("jate", 1);
 
   //creates a new transaction and specify the database and data privileges
@@ -34,29 +34,26 @@ export const putDb = async (content) => {
   console.log("Data saved to the database", result);
 };
 
-
-
 // TODO: Add logic for a method that gets all the content from the database
 
 export const getDb = async () => {
   console.log("GET all notes from the database");
-//creates a connection to the database database and version we want to use
-const textDB = await openDB('jate', 1);
-  
-//creates a new transaction and specify the database and data privileges
-const tx = textDB.transaction('jate', 'readonly');
+  //creates a connection to the database database and version we want to use
+  const textDB = await openDB("jate", 1);
 
-//opens up the desired object store
-const store = tx.objectStore('jate');
+  //creates a new transaction and specify the database and data privileges
+  const tx = textDB.transaction("jate", "readonly");
 
-//uses the .getALL() method to get all data in the database
-const request = store.getAll();
+  //opens up the desired object store
+  const store = tx.objectStore("jate");
 
-//gets confirmation of the request
-const result = await request;
-console.log('result.value', result);
-return result;
+  //uses the .getALL() method to get all data in the database
+  const request = store.getAll();
 
+  //gets confirmation of the request
+  const result = await request;
+  console.log("result.value", result);
+  return result?.value;
 };
 
 initdb();
