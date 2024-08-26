@@ -23,7 +23,7 @@ PWA Text Editor is a single-page application that runs in the browser. It was bu
 
 ## Usage
 
-[Deployed application link]()
+[Deployed application link](https://pwa-text-editor-y5zq.onrender.com)
 
 The image below shows the apperance of the single-page application
 
